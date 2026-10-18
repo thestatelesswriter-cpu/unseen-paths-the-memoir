@@ -77,6 +77,11 @@
       line-height: 1.6;
     }
 
+    .caption a {
+      color: #c9a77d;
+      text-underline-offset: .2em;
+    }
+
     @media (max-width: 600px) {
       body { padding: 28px 16px; }
       .byline { margin-bottom: 22px; }
@@ -91,14 +96,16 @@
     <p class="byline">Watch the film</p>
     <div class="player">
       <iframe
-        src="https://www.youtube-nocookie.com/embed/iMay-Hxo0ag"
+        src="https://www.youtube.com/embed/iMay-Hxo0ag"
         title="Unseen Paths by Miguel Rodriguez"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen>
       </iframe>
     </div>
-    <p class="caption">Select play to watch. Playback is provided by YouTube.</p>
+    <p class="caption">
+      Select play to watch. If playback stops or fails, <a href="https://www.youtube.com/watch?v=iMay-Hxo0ag" target="_blank" rel="noopener noreferrer">watch directly on YouTube</a>.
+    </p>
   </main>
 </body>
 </html>
