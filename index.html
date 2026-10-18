@@ -35,33 +35,23 @@
       position: relative;
       display: grid;
       min-height: min(820px, 100svh);
-      place-items: center;
+      place-items: start center;
       overflow: hidden;
-      padding: 72px 24px 84px;
+      padding: 26px 24px 30px;
       text-align: center;
       isolation: isolate;
       background:
-        linear-gradient(180deg, rgba(8, 8, 8, .29), rgba(8, 8, 8, .48) 45%, #0b0b0a 100%),
-        radial-gradient(ellipse at 50% 34%, rgba(201, 171, 128, .18), transparent 55%),
-        url("front_cover_ebook.png") center 60% / cover no-repeat,
+        linear-gradient(180deg, #0b0b0a 0, rgba(11, 11, 10, .98) 150px, rgba(11, 11, 10, .18) 255px, rgba(8, 8, 8, .16) 100%),
+        url("front_cover_ebook.png") center 30% / cover no-repeat,
         linear-gradient(150deg, #49463e, #242522 49%, #111210);
-    }
-
-    .hero::before {
-      position: absolute;
-      z-index: -1;
-      inset: 0;
-      background:
-        linear-gradient(178deg, transparent 0 45%, rgba(0, 0, 0, .35) 45.2% 45.7%, transparent 46%),
-        repeating-linear-gradient(174deg, transparent 0 46%, rgba(220, 207, 183, .05) 46.2% 46.4%, transparent 46.7% 53%),
-        linear-gradient(90deg, rgba(10, 10, 9, .45), transparent 50%, rgba(10, 10, 9, .4));
-      content: "";
     }
 
     .hero-content {
       width: min(100%, 940px);
-      padding-top: 34px;
+      padding-top: 0;
     }
+
+    .hero .eyebrow { display: none; }
 
     .eyebrow,
     .section-label {
@@ -74,28 +64,29 @@
     }
 
     h1 {
-      margin: 26px 0 24px;
+      margin: 0;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(4rem, 12vw, 9.5rem);
+      font-size: clamp(2rem, 7.5vw, 6rem);
       font-weight: 700;
       letter-spacing: -.055em;
-      line-height: .82;
+      line-height: 1;
       text-shadow: 0 8px 36px rgba(0, 0, 0, .55);
+      white-space: nowrap;
     }
 
-    h1 span { display: block; }
-    h1 span + span { margin-top: .14em; }
+    h1 span { display: inline; }
+    h1 span + span { margin-left: .14em; }
 
     .tagline {
       max-width: 740px;
-      margin: 34px auto 18px;
-      font-size: clamp(1rem, 2.2vw, 1.35rem);
+      margin: 8px auto 0;
+      font-size: clamp(.9rem, 2vw, 1.2rem);
       font-weight: 300;
       line-height: 1.5;
     }
 
     .author-mark {
-      margin: 0 0 34px;
+      margin: 8px 0 0;
       font-size: .85rem;
       letter-spacing: .34em;
       text-transform: uppercase;
@@ -146,10 +137,14 @@
     }
 
     .hero-actions {
+      position: absolute;
+      right: max(24px, calc((100% - 940px) / 2));
+      bottom: 30px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
     }
 
     .film-section {
@@ -192,7 +187,10 @@
     }
 
     .format-note {
-      margin: 17px 0 0;
+      position: absolute;
+      bottom: 42px;
+      left: max(24px, calc((100% - 940px) / 2));
+      margin: 0;
       color: rgba(243, 239, 231, .66);
       font-size: .72rem;
       letter-spacing: .12em;
