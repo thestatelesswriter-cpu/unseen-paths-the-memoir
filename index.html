@@ -31,19 +31,9 @@
 
     a { color: inherit; }
 
-    .hero {
-      display: flex;
-      justify-content: center;
-      padding: 24px;
-      background: var(--ink);
-    }
+    .hero { padding: 0; background: var(--ink); }
 
-    .hero-cover {
-      display: block;
-      width: min(100%, 560px);
-      height: auto;
-      box-shadow: 0 24px 72px rgba(0, 0, 0, .45);
-    }
+    .hero-cover { display: block; width: 100%; height: auto; }
 
     .eyebrow,
     .section-label {
@@ -241,7 +231,7 @@
     footer p { margin: 5px 0; }
 
     @media (max-width: 600px) {
-      .hero { padding: 16px; }
+      .hero { padding: 0; background: var(--ink); }
       .story, .order, .author { padding-inline: 20px; }
     }
 
