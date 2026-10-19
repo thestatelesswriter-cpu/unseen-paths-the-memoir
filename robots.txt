@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thestatelesswriter-cpu.github.io/unseen-paths-the-memoir/sitemap.xml
